@@ -77,6 +77,7 @@
         app:layout_constraintTop_toBottomOf="@id/barrier"
         tools:text="@sample/posts.json/data/content" />
 
+
     <ImageButton
         android:id="@+id/likesImage"
         android:layout_width="wrap_content"
@@ -86,7 +87,7 @@
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/content"
-        app:srcCompat="@drawable/ic_likes_24" />
+        tools:srcCompat="@drawable/ic_likes_24" />
 
     <ImageButton
         android:id="@+id/repostsImage"
@@ -95,7 +96,7 @@
         android:layout_marginStart="32dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/description_post_menu"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toEndOf="@+id/likePlus"
         app:layout_constraintTop_toBottomOf="@+id/content"
         app:srcCompat="@drawable/ic_reposts_24" />
 
@@ -122,7 +123,7 @@
         tools:text="@sample/posts.json/data/viewings" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/likePlus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="@sample/posts.json/data/likes"
@@ -132,7 +133,7 @@
         app:layout_constraintTop_toTopOf="@+id/repostsImage" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/repostPlus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="@sample/posts.json/data/reposts"
