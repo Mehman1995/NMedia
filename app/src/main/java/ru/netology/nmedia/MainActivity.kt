@@ -1,6 +1,7 @@
 package ru.netology.nmedia
 
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -26,8 +27,7 @@ class MainActivity : AppCompatActivity() {
 
             override fun onRemove(post: Post) =
                 viewModel.removeById(post.id)
-        }
-        )
+        })
 
         binding.list.adapter = adapter
 
@@ -43,6 +43,8 @@ class MainActivity : AppCompatActivity() {
                 requestFocus()
                 setText(post.content)
             }
+            binding.oldText.text = post.content
+            binding.editCancelGroup.visibility = View.VISIBLE
         }
 
         binding.save.setOnClickListener {
@@ -62,7 +64,20 @@ class MainActivity : AppCompatActivity() {
                 setText("")
                 clearFocus()
                 AndroidUtils.hideKeyboard(this)
+                binding.editCancelGroup.visibility = View.GONE
             }
+        }
+
+        binding.cancelEdit.setOnClickListener {
+            with(binding.content) {
+                viewModel.cancelEdit()
+
+                setText("")
+                clearFocus()
+                AndroidUtils.hideKeyboard(this)
+                binding.editCancelGroup.visibility = View.GONE
+            }
+            binding.oldText.text = ""
         }
     }
 }
