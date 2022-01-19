@@ -16,18 +16,16 @@ class PostViewHolder(
             published.text = post.published
             content.text = post.content
 
-            val likesImageResource =
-                if (post.likedByMe) R.drawable.ic_liked_24 else R.drawable.ic_likes_24
-            likesImage.setImageResource(likesImageResource)
+            like.isChecked = post.likedByMe
+            like.text = "${post.likesCount}"
 
-            likesText.text = PostService.getCountText(post.likesCount)
-            repostsText.text = PostService.getCountText(post.repostsCount)
-            viewingsText.text = PostService.getCountText(post.viewingsCount)
+            repost.text = PostService.getCountText(post.repostsCount)
+            viewing.text = PostService.getCountText(post.viewingsCount)
 
-            likesImage.setOnClickListener {
+            like.setOnClickListener {
                 onInteractionListener.onLike(post)
             }
-            repostsImage.setOnClickListener {
+            repost.setOnClickListener {
                 onInteractionListener.onRepost(post)
             }
 

@@ -7,4 +7,9 @@
     <string name="edit">Edit</string>
     <string name="post_text">Post text</string>
     <string name="edit_hint">Edit text</string>
+    <string name="like_post">Like post</string>
+    <string name="repost">Repost</string>
+    <string name="viewing_post">Post\'s viewings</string>
+    <string name="cancel_editing">Cancel editing</string>
+    <string name="save">Save</string>
 </resources>

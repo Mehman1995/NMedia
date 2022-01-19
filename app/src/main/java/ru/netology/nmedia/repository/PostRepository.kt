@@ -21,7 +21,8 @@ class PostRepositoryInMemoryImpl : PostRepository {
             content = "Мы растём сами и помогаем расти студентам: от новичков до уверенных профессионалов. Но самое важное остаётся с нами: мы верим, что в каждом уже есть сила, которая заставляет хотеть больше, целиться выше, бежать быстрее. Наша миссия — помочь встать на путь роста и начать цепочку перемен → http://netolo.gy/fyb",
             published = "21 мая в 18:36",
             likesCount = 10,
-            repostsCount = 1
+            repostsCount = 1,
+            viewingsCount = 20
         ),
         Post(
             id = 4,
@@ -29,7 +30,8 @@ class PostRepositoryInMemoryImpl : PostRepository {
             content = "Затем появились курсы по дизайну, разработке, аналитике и управлению",
             published = "21 мая в 18:36",
             likesCount = 2,
-            repostsCount = 0
+            repostsCount = 0,
+            viewingsCount = 500
         ),
         Post(
             id = 3,
@@ -37,7 +39,8 @@ class PostRepositoryInMemoryImpl : PostRepository {
             content = "Когда-то Нетология начиналась с интенсивов по онлайн-маркетингу",
             published = "21 мая в 18:36",
             likesCount = 120,
-            repostsCount = 10
+            repostsCount = 10,
+            viewingsCount = 1100
         ),
         Post(
             id = 2,
@@ -45,7 +48,8 @@ class PostRepositoryInMemoryImpl : PostRepository {
             content = "Привет, это новая Нетология!",
             published = "21 мая в 18:36",
             likesCount = 49,
-            repostsCount = 99
+            repostsCount = 99,
+            viewingsCount = 1234
         ),
         Post(
             id = 1,
@@ -53,7 +57,8 @@ class PostRepositoryInMemoryImpl : PostRepository {
             content = "Привет, это новая Нетология! Когда-то Нетология начиналась с интенсивов по онлайн-маркетингу. Затем появились курсы по дизайну, разработке, аналитике и управлению. Мы растём сами и помогаем расти студентам: от новичков до уверенных профессионалов. Но самое важное остаётся с нами: мы верим, что в каждом уже есть сила, которая заставляет хотеть больше, целиться выше, бежать быстрее. Наша миссия — помочь встать на путь роста и начать цепочку перемен → http://netolo.gy/fyb",
             published = "21 мая в 18:36",
             likesCount = 999,
-            repostsCount = 999
+            repostsCount = 999,
+            viewingsCount = 100_000
         )
     )
 

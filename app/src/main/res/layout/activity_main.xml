@@ -39,12 +39,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/common_spacing"
         android:layout_marginEnd="@dimen/common_spacing"
+        android:text="@string/edit_hint"
         app:layout_constraintBottom_toTopOf="@+id/oldText"
         app:layout_constraintEnd_toStartOf="@id/cancelEdit"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/barrierForEditCancel"
-        app:layout_constraintVertical_chainStyle="packed"
-        android:text="@string/edit_hint" />
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
         android:id="@+id/oldText"
@@ -52,24 +52,24 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/common_spacing"
         android:layout_marginEnd="@dimen/common_spacing"
+        android:ellipsize="end"
+        android:singleLine="true"
         app:layout_constraintBottom_toTopOf="@id/barrierForEditPost"
         app:layout_constraintEnd_toStartOf="@id/cancelEdit"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTitle"
-        android:ellipsize="end"
-        android:singleLine="true"
         tools:text="@sample/posts.json/data/content" />
 
-    <ImageButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/cancelEdit"
+        style="@style/Widget.AppTheme.IconOnlyEditButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/description_post_menu"
+        android:contentDescription="@string/cancel_editing"
+        app:icon="@drawable/ic_cancel_edit_48"
         app:layout_constraintBottom_toBottomOf="@id/barrierForEditPost"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/barrierForEditCancel"
-        app:srcCompat="@drawable/ic_cancel_edit_48" />
+        app:layout_constraintTop_toBottomOf="@id/barrierForEditCancel" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrierForEditPost"
@@ -94,16 +94,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/barrierForEditPost" />
 
-    <ImageButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/save"
+        style="@style/Widget.AppTheme.IconOnlyEditButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/description_post_menu"
+        android:contentDescription="@string/save"
+        app:icon="@drawable/ic_save_48"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/barrierForEditPost"
-        app:srcCompat="@drawable/ic_save_48" />
+        app:layout_constraintTop_toBottomOf="@id/barrierForEditPost" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

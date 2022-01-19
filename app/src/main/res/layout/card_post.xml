@@ -45,16 +45,15 @@
         app:layout_constraintTop_toBottomOf="@id/author"
         tools:text="@sample/posts.json/data/published" />
 
-    <ImageButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/menu"
+        style="@style/Widget.AppTheme.IconOnlyButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/common_spacing"
-        android:background="@android:color/transparent"
         android:contentDescription="@string/description_post_menu"
+        app:icon="@drawable/ic_more_vert_24"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_more_vert_24" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrier"
@@ -76,65 +75,41 @@
         app:layout_constraintTop_toBottomOf="@id/barrier"
         tools:text="@sample/posts.json/data/content" />
 
-    <ImageButton
-        android:id="@+id/likesImage"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/like"
+        style="@style/Widget.AppTheme.LikeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/description_post_menu"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        android:checkable="true"
+        android:contentDescription="@string/like_post"
+        app:icon="@drawable/ic_like_selector_24dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/content"
-        tools:srcCompat="@drawable/ic_likes_24" />
-
-    <TextView
-        android:id="@+id/likesText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/small_spacing"
-        app:layout_constraintBottom_toBottomOf="@+id/likesImage"
-        app:layout_constraintStart_toEndOf="@+id/likesImage"
         app:layout_constraintTop_toBottomOf="@+id/content"
         tools:text="@sample/posts.json/data/likes" />
 
-    <ImageButton
-        android:id="@+id/repostsImage"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/repost"
+        style="@style/Widget.AppTheme.StandardButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/big_spacing"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/description_post_menu"
-        app:layout_constraintStart_toEndOf="@+id/likesText"
-        app:layout_constraintTop_toBottomOf="@+id/content"
-        app:srcCompat="@drawable/ic_reposts_24" />
-
-    <TextView
-        android:id="@+id/repostsText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/small_spacing"
-        android:layout_marginEnd="@dimen/common_spacing"
-        app:layout_constraintBottom_toBottomOf="@+id/repostsImage"
-        app:layout_constraintStart_toEndOf="@+id/repostsImage"
+        android:layout_marginStart="@dimen/common_spacing"
+        android:contentDescription="@string/repost"
+        app:icon="@drawable/ic_reposts_24"
+        app:layout_constraintStart_toEndOf="@+id/like"
         app:layout_constraintTop_toBottomOf="@+id/content"
         tools:text="@sample/posts.json/data/reposts" />
 
-    <ImageButton
-        android:id="@+id/viewingsImage"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/viewing"
+        style="@style/Widget.AppTheme.StandardButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/small_spacing"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/description_post_menu"
-        app:layout_constraintEnd_toStartOf="@+id/viewingsText"
-        app:layout_constraintTop_toBottomOf="@+id/content"
-        app:srcCompat="@drawable/ic_viewings_24" />
-
-    <TextView
-        android:id="@+id/viewingsText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/likesImage"
+        android:layout_marginStart="@dimen/common_spacing"
+        android:checkable="false"
+        android:clickable="false"
+        android:contentDescription="@string/viewing_post"
+        app:icon="@drawable/ic_viewings_24"
+        app:layout_constraintBottom_toBottomOf="@+id/like"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/content"
         tools:text="@sample/posts.json/data/viewings" />

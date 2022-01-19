@@ -8,4 +8,9 @@
     <string name="edit">Редактировать</string>
     <string name="post_text">Текст поста</string>
     <string name="edit_hint">Редактировать текст</string>
+    <string name="like_post">Лайкнуть пост</string>
+    <string name="repost">Репостнуть</string>
+    <string name="viewing_post">Количество просмотров</string>
+    <string name="cancel_editing">Отменить редактирование</string>
+    <string name="save">Сохранить</string>
 </resources>
