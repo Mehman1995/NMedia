@@ -13,4 +13,6 @@
     <string name="viewing_post">Количество просмотров</string>
     <string name="cancel_editing">Отменить редактирование</string>
     <string name="save">Сохранить</string>
+    <string name="add_post">Добавить пост</string>
+    <string name="chooser_play_video">Воспроизвести видео</string>
 </resources>

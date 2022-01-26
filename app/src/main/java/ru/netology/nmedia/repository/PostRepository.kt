@@ -10,10 +10,17 @@ interface PostRepository {
     fun likeById(id: Long)
     fun repostById(id: Long)
     fun removeById(id: Long)
-    fun save(post: Post)
+    fun save(postId: Long, newContent: String)
 }
 
 class PostRepositoryInMemoryImpl : PostRepository {
+    private val emptyPost = Post(
+        id = 0,
+        author = "",
+        content = "",
+        published = "",
+    )
+
     private val defaultPosts = listOf(
         Post(
             id = 5,
@@ -22,7 +29,8 @@ class PostRepositoryInMemoryImpl : PostRepository {
             published = "21 мая в 18:36",
             likesCount = 10,
             repostsCount = 1,
-            viewingsCount = 20
+            viewingsCount = 20,
+            videoUrl = "https://www.youtube.com/watch?v=leCGI9flgbE"
         ),
         Post(
             id = 4,
@@ -97,12 +105,13 @@ class PostRepositoryInMemoryImpl : PostRepository {
         data.value = updatedPosts
     }
 
-    override fun save(post: Post) {
-        if (post.id == 0L) {
-            val newPost = post.copy(
+    override fun save(postId: Long, newContent: String) {
+        if (postId == 0L) {
+            val newPost = emptyPost.copy(
                 id = nextId++,
                 author = "Me",
-                published = "now"
+                published = "now",
+                content = newContent
             )
             val posts = listOf(newPost) + getPostsFromLiveData()
             data.value = posts
@@ -110,8 +119,8 @@ class PostRepositoryInMemoryImpl : PostRepository {
         }
 
         val updater = { oldPost: Post ->
-            if (oldPost.id == post.id)
-                oldPost.copy(content = post.content)
+            if (oldPost.id == postId)
+                oldPost.copy(content = newContent)
             else
                 oldPost
         }

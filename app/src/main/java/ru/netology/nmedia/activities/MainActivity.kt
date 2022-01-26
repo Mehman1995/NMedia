@@ -1,4 +1,4 @@
-package ru.netology.nmedia
+package ru.netology.nmedia.activities
 
 import android.os.Bundle
 import androidx.activity.viewModels
@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import ru.netology.nmedia.OnInteractionListener
 import ru.netology.nmedia.PostAdapter
 import ru.netology.nmedia.PostViewModel
-import ru.netology.nmedia.activities.NewPostResultContract
 import ru.netology.nmedia.databinding.ActivityMainBinding
 import ru.netology.nmedia.dto.Post
 

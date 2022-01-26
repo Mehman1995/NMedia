@@ -12,4 +12,6 @@
     <string name="viewing_post">Post\'s viewings</string>
     <string name="cancel_editing">Cancel editing</string>
     <string name="save">Save</string>
+    <string name="add_post">Add post</string>
+    <string name="chooser_play_video">Play video</string>
 </resources>
