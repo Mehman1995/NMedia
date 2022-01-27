@@ -13,4 +13,14 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    
+    <style name="Widget.AppCompat.LikeChecked" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="iconTint">@color/color_like</item>
+    </style>
+
+    <style name="Widget.AppCompat.ElementsPostCard" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="iconTint">@color/color_control_normal</item>
+    </style>
+
+
 </resources>
