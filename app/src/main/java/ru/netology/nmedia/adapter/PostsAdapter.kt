@@ -9,7 +9,9 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import ru.netology.nmedia.R
+import ru.netology.nmedia.SinglePostFragment
 import ru.netology.nmedia.databinding.CardPostBinding
+import ru.netology.nmedia.databinding.FragmentSinglePostBinding
 import ru.netology.nmedia.dto.Post
 import ru.netology.nmedia.utils.Utils
 import java.util.zip.Inflater
@@ -20,6 +22,7 @@ interface PostCallback {
     fun remove(post: Post)
     fun edit(post: Post)
     fun onVideo(post: Post)
+    fun onPost(post: Post)
 }
 
 class PostsAdapter(private val postCallback: PostCallback) :
@@ -41,7 +44,9 @@ class PostViewHolder(
     private val binding: CardPostBinding,
     private val postCallback: PostCallback
 ) : RecyclerView.ViewHolder(binding.root) {
+
     fun bind(post: Post) {
+
         with(binding) {
             author.text = post.author
             content.text = post.content
@@ -69,6 +74,10 @@ class PostViewHolder(
 
             viewForVideo.setOnClickListener {
                 postCallback.onVideo(post)
+            }
+
+            content.setOnClickListener {
+                postCallback.onPost(post)
             }
 
             menu.setOnClickListener {
