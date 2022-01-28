@@ -10,7 +10,7 @@ class PostRepositoryInMemory : PostRepository {
         Post(
             id = nextId++,
             author = "Нетология. Университет интернет-профессий будущег",
-            content = "Нажми быстрее",
+            content = "Н бежать быстрее",
             published = "21 мая в 19:37",
             likesCount = 1,
             sharesCount = 2,
