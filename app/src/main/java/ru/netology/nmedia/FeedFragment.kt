@@ -18,7 +18,6 @@ import kotlinx.android.synthetic.main.card_post.view.*
 import ru.netology.nmedia.adapter.PostCallback
 import ru.netology.nmedia.adapter.PostsAdapter
 import ru.netology.nmedia.databinding.FragmentFeedBinding
-import ru.netology.nmedia.resultContract.NewPostResultContract
 
 
 class FeedFragment : Fragment() {

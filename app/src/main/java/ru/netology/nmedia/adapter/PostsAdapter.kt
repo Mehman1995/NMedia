@@ -54,10 +54,7 @@ class PostViewHolder(
             like.text = Utils.reductionInNumbers(post.likesCount)
             share.text = Utils.reductionInNumbers(post.sharesCount)
             like.isChecked = post.likedByMe
-//            like.setButtonDrawable(
-//                if (post.likedByMe) R.drawable.ic_baseline_favorite_24
-//                else R.drawable.ic_baseline_favorite_border_24
-//            )
+
             if (post.video != "") group.visibility = View.VISIBLE
 
             like.setOnClickListener {
