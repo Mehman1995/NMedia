@@ -13,8 +13,6 @@ import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import kotlinx.android.synthetic.main.card_post.*
-import kotlinx.android.synthetic.main.card_post.view.*
 import ru.netology.nmedia.adapter.PostCallback
 import ru.netology.nmedia.adapter.PostsAdapter
 import ru.netology.nmedia.databinding.FragmentFeedBinding

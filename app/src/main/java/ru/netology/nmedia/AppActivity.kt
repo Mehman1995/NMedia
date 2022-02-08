@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.android.material.snackbar.BaseTransientBottomBar.LENGTH_INDEFINITE
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.messaging.FirebaseMessaging
 import ru.netology.nmedia.databinding.ActivityAppBinding
 
 class AppActivity : AppCompatActivity() {
@@ -23,5 +24,10 @@ class AppActivity : AppCompatActivity() {
                 finish()
             }.show()
         }
+
+        FirebaseMessaging.getInstance().token.addOnSuccessListener {
+            println(it)
+        } // Этот метод пригодиться, если токен не выводится в консоль
     }
+
 }
